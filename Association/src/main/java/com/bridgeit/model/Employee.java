@@ -2,18 +2,20 @@ package com.bridgeit.model;
 
 public class Employee {
 	
-	private String id;
-	private String name;
-	private String salary;
+	private int employeeId;  
+	private String name,email;  
+	private Address address;
+	
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public String getId() {
-		return id;
+	public int getEmployeeId() {
+		return employeeId;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
 	}
 	public String getName() {
 		return name;
@@ -21,12 +23,16 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSalary() {
-		return salary;
+	public String getEmail() {
+		return email;
 	}
-	public void setSalary(String salary) {
-		this.salary = salary;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	
-
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}  
 }

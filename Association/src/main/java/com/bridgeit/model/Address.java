@@ -1,51 +1,48 @@
 package com.bridgeit.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="Address")
 public class Address {
-
-	private int id;
-	private String street;
-	private Person person;
+	
+	private int aid;
+	private String Street;
+	private String City;
+	private String Dist;
+	private Employee employee;
+	
+	
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Id
-	@GeneratedValue
-	@Column(name="address_id")
-	public int getId() {
-		return id;
+	public int getAid() {
+		return aid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setAid(int aid) {
+		this.aid = aid;
 	}
 	
-	
-	
-	@Column(name="Street")
 	public String getStreet() {
-		return street;
+		return Street;
 	}
-	
 	public void setStreet(String street) {
-		this.street = street;
+		Street = street;
 	}
-	@OneToOne
-	@PrimaryKeyJoinColumn
-	public Person getPerson() {
-		return person;
+	public String getCity() {
+		return City;
 	}
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setCity(String city) {
+		City = city;
 	}
-	
+	public String getDist() {
+		return Dist;
+	}
+	public void setDist(String dist) {
+		Dist = dist;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
 }

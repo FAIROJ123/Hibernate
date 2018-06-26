@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.bridgeit.model.Employee" table="Association_Emp">
+
+<id name="employeeId">
+ <generator class="assigned"></generator>
+</id>
+
+<property name="name"></property>
+<property name="email"></property>
+<one-to-one name="address" class="com.bridgeit.model.Address"></one-to-one>
+</class>
+
+
+<class name="com.bridgeit.model.Address" table="Address">
+
+<id name="aid">
+<generator class="foreign">
+ <param name="property" >employee</param>
+ </generator>
+</id>
+
+<property name="Street"></property>
+<property name="City"></property>
+<property name="Dist"></property>
+<one-to-one name="employee" class="com.bridgeit.model.Employee" constrained="true"></one-to-one>
+</class>
+</hibernate-mapping> 

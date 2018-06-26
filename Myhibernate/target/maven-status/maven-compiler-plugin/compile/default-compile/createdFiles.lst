@@ -1,0 +1,4 @@
+com/bridgeit/myhibernatexml/DataStore.class
+com/bridgeit/model/Employee.class
+com/bridgeit/myhibernatexml/Employee.class
+com/bridgeit/annotations/Test.class
